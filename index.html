@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Playlist Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body background="https://images.unsplash.com/photo-1496293455970-f8581aae0e3b?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG11c2ljJTIwcGxheWVyfGVufDB8fDB8fHww">
+  <h1>Music Playlist Generator</h1>
+  
+  <div class="form-container">
+    <label for="mood">Choose your mood:</label>
+    <select id="mood">
+      <option value="Happy">Happy</option>
+      <option value="Relaxed">Relaxed</option>
+      <option value="Energetic">Energetic</option>
+      <option value="Chill">Chill</option>
+    </select>
+    
+    <label for="genre">Select a genre:</label>
+    <select id="genre">
+      <option value="Pop">Pop</option>
+      <option value="Rock">Rock</option>
+      <option value="Jazz">Jazz</option>
+      <option value="Electronic">Electronic</option>
+    </select>
+    
+    <label for="numSongs">Number of songs:</label>
+    <input type="number" id="numSongs" min="1" max="5" value="5">
+    
+    <button onclick="generatePlaylist()">Generate Playlist</button>
+  </div>
+  
+  <h2>Your Playlist:</h2>
+  <ul id="playlist"></ul>
+  
+  <audio id="audioPlayer" controls></audio>
+  
+  <script src="script.js"></script>
+</body>
+</html>
